@@ -5,27 +5,31 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: _HK_香港_7, server: 47.243.182.204, port: 22082, type: vmess, uuid: f46292d1-a5c6-44e3-9539-c45ea9f7ec6a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [47.243.182.204]}}, udp: true}
+  - {name: 美国 072, server: qiqis.cf, port: 443, type: vmess, uuid: 4e6d153c-e5b2-4911-bc72-e11c64f3ce93, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /b356a4/, ws-headers: {Host: 1dcelis.qiqis.ml}, udp: true}
+  - {name: 日本 003, server: 168.138.43.89, port: 443, type: trojan, password: d06a3f01-1ff0-4792-9b8e-a5a604bc74a2, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -44,32 +48,35 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - _HK_香港_7
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -85,7 +92,8 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - _HK_香港_7
+      - 美国 072
+      - 日本 003
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
