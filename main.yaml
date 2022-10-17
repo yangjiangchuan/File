@@ -5,35 +5,39 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: "[VMess] 🇺🇲 -美国-20.6.178.91", server: 20.6.178.91, port: 43632, type: vmess, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇲 -美国-141.101.114.33", server: 141.101.114.33, port: 443, type: vmess, uuid: e5a88ce2-fc1b-45d1-9c5f-553721d28004, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /dongtaiwang.com, ws-headers: {Host: v2ray1.zhujicn2.org}, udp: true}
-  - {name: "[VMess] 🇸🇬 -新加坡-172.104.56.233", server: 172.104.56.233, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /chat, ws-headers: {Host: 172.104.56.233}, udp: true}
+  - {name: Relay_🇺🇸 US-🇺🇸US_459, server: sg.iamnotagoodman.com, port: 443, type: trojan, password: 4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52, sni: sg.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇺🇸 US-🇫🇷FR_462, server: de.iamnotagoodman.com, port: 443, type: trojan, password: 4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52, sni: de.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇯🇵 JP-🇯🇵JP_220, server: kr1.api-aws.com, port: 443, type: trojan, password: cbd08acf-2d47-4065-aafa-4201e5307f67, sni: kr1.api-aws.com, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇺🇸 US-🇺🇸US_465, server: ar.iamnotagoodman.com, port: 443, type: trojan, password: 4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52, sni: ar.iamnotagoodman.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -52,9 +56,10 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -65,26 +70,29 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,9 +108,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "[VMess] 🇺🇲 -美国-20.6.178.91"
-      - "[VMess] 🇺🇲 -美国-141.101.114.33"
-      - "[VMess] 🇸🇬 -新加坡-172.104.56.233"
+      - Relay_🇺🇸 US-🇺🇸US_459
+      - Relay_🇺🇸 US-🇫🇷FR_462
+      - Relay_🇯🇵 JP-🇯🇵JP_220
+      - Relay_🇺🇸 US-🇺🇸US_465
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
