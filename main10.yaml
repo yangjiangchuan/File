@@ -5,63 +5,31 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 6.11 MB/s-2|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: f236daf7-7230-4998-a695-3dea80570a85, udp: true}
-  - {name: 5.51 MB/s-3|JCBB_香港04【vip1, server: gzdx.jcnode.top, port: 20000, type: vmess, uuid: c628daa9-a0b7-49d8-8ff3-1d5a5e6430a1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 5.26 MB/s-2|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: e1cd7aec-36d9-493e-82f3-ec2fbcecba9a, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 5.25 MB/s-2|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: f236daf7-7230-4998-a695-3dea80570a85, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 5.22 MB/s-3|JCBB_香港03【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: 5d4d2fee-233c-4dbe-a9d0-aa97a5dbc0e9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 4.68 MB/s-2|JCBB_香港04【vip1, server: gzdx.jcnode.top, port: 20000, type: vmess, uuid: 88bcaa8d-bef3-4131-90da-1da251987385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 4.57 MB/s-2|vip1 日本-10, server: gzdx.jcnode.top, port: 41003, type: trojan, password: e1cd7aec-36d9-493e-82f3-ec2fbcecba9a, sni: jp01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 4.19 MB/s-3|JCBB_香港04【vip1, server: gzdx.jcnode.top, port: 20000, type: vmess, uuid: 5d4d2fee-233c-4dbe-a9d0-aa97a5dbc0e9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 4.15 MB/s-3|JCBB_ 台湾 01【vip1】, server: gzyd.jcnode.top, port: 24000, type: vmess, uuid: c628daa9-a0b7-49d8-8ff3-1d5a5e6430a1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 4.03 MB/s-5|JCBB_香港02【vip1】, server: gzdx.jcnode.top, port: 20001, type: vmess, uuid: 7881755d-b5e6-4bbd-836e-fe57e87010ad, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 1.23 MB/s-3|US美国(youtube阿伟科技), server: 203.30.191.100, port: 443, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /5QNROSRV, headers: {Host: clash1.ssr-free2.xyz}}, udp: true}
+  - {name: 0.29 MB/s-8|Netherlands 01 TG:@nodpai, server: 156.225.67.107, port: 51234, type: vmess, uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,74 +48,35 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -163,16 +92,8 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 6.11 MB/s-2|vip1 香港-01
-      - 5.51 MB/s-3|JCBB_香港04【vip1
-      - 5.26 MB/s-2|vip1 新加坡-05
-      - 5.25 MB/s-2|vip1 新加坡-05
-      - 5.22 MB/s-3|JCBB_香港03【vip1】
-      - 4.68 MB/s-2|JCBB_香港04【vip1
-      - 4.57 MB/s-2|vip1 日本-10
-      - 4.19 MB/s-3|JCBB_香港04【vip1
-      - 4.15 MB/s-3|JCBB_ 台湾 01【vip1】
-      - 4.03 MB/s-5|JCBB_香港02【vip1】
+      - 1.23 MB/s-3|US美国(youtube阿伟科技)
+      - 0.29 MB/s-8|Netherlands 01 TG:@nodpai
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
