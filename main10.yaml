@@ -5,63 +5,27 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 5.12 MB/s-2|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 312dd66f-500c-44e9-8462-c21612aa9ccf, udp: true}
-  - {name: 4.98 MB/s-2|vip1 香港-13, server: gzdx.jcnode.top, port: 40000, type: trojan, password: 312dd66f-500c-44e9-8462-c21612aa9ccf, sni: hk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai, server: ns02.gutingting.com, port: 30021, type: vmess, uuid: 89f9a5f7-d845-4866-b8b4-233612d4b460, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aceamedv, headers: {Host: sh01.fastcloud.club}}, udp: true}
-  - {name: 4.38 MB/s-2|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: 312dd66f-500c-44e9-8462-c21612aa9ccf, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 4.33 MB/s-2|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 312dd66f-500c-44e9-8462-c21612aa9ccf, udp: true}
-  - {name: 4.07 MB/s-2|vip1 新加坡-02, server: gzdx.jcnode.top, port: 43000, type: vmess, uuid: 312dd66f-500c-44e9-8462-c21612aa9ccf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai, server: ns01.gutingting.com, port: 30009, type: vmess, uuid: c0b2d91c-02e4-4c45-a443-a107bf395a45, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aceamedv, headers: {Host: sh01.fastcloud.club}}, udp: true}
-  - {name: 3.87 MB/s-2|vip3 香港-12, server: gzyd02.jcnode.top, port: 40001, type: trojan, password: 312dd66f-500c-44e9-8462-c21612aa9ccf, sni: hk02.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 3.81 MB/s-2|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: bc1c12f9-a0c8-46da-9752-6b3def9738d4, udp: true}
-  - {name: 3.76 MB/s-2|vip1 香港-14, server: gzyd.jcnode.top, port: 40000, type: trojan, password: 312dd66f-500c-44e9-8462-c21612aa9ccf, sni: hk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 0.25 MB/s-3|China 01 TG:@nodpai, server: 142.4.126.72, port: 31002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,72 +44,31 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.33 MB/s-2|vip1 香港-01
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -161,16 +84,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 5.12 MB/s-2|vip1 日本-04
-      - 4.98 MB/s-2|vip1 香港-13
-      - 4.60 MB/s-2|Relay 🇯🇵 Japan 04 TG:@nodpai
-      - 4.38 MB/s-2|vip1 新加坡-05
-      - 4.33 MB/s-2|vip1 香港-01
-      - 4.07 MB/s-2|vip1 新加坡-02
-      - 4.06 MB/s-2|Relay 🇯🇵 Japan 08 TG:@nodpai
-      - 3.87 MB/s-2|vip3 香港-12
-      - 3.81 MB/s-2|vip1 香港-01
-      - 3.76 MB/s-2|vip1 香港-14
+      - 0.25 MB/s-3|China 01 TG:@nodpai
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
