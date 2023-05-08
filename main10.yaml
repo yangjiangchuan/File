@@ -5,63 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 389ms-12|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 460ms-12|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 419ms-12|vip1 香港-05, server: gzdx.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 427ms-12|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 359ms-12|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 368ms-12|vip1 日本-10, server: gzdx.jcnode.top, port: 41001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 453ms-12|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 323ms-12|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 322ms-12|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 435ms-12|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 319ms-13|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 1152ms-13|vip1 香港-05, server: gzdx.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 1424ms-13|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 339ms-13|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 343ms-13|vip1 日本-10, server: gzdx.jcnode.top, port: 41001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 466ms-13|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 351ms-13|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 322ms-13|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 346ms-13|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 1165ms-13|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,74 +80,73 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -163,16 +162,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 389ms-12|vip1 香港-01
-      - 460ms-12|vip1 香港-02
-      - 419ms-12|vip1 香港-05
-      - 427ms-12|vip1 香港-06
-      - 359ms-12|vip1 日本-04
-      - 368ms-12|vip1 日本-10
-      - 453ms-12|vip1 韩国-01
-      - 323ms-12|vip1 台湾-01
-      - 322ms-12|vip1 台湾-02
-      - 435ms-12|vip1 台湾-05
+      - 319ms-13|vip1 香港-02
+      - 1152ms-13|vip1 香港-05
+      - 1424ms-13|vip1 香港-06
+      - 339ms-13|vip1 日本-04
+      - 343ms-13|vip1 日本-10
+      - 466ms-13|vip1 韩国-01
+      - 351ms-13|vip1 台湾-01
+      - 322ms-13|vip1 台湾-02
+      - 346ms-13|vip1 台湾-05
+      - 1165ms-13|vip1 新加坡-08
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
