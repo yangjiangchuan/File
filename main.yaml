@@ -5,571 +5,923 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 709ms-20|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 541ms-20|vip1 澳大利亚-01, server: gzdx.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
-  - {name: 1505ms-20|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1855ms-20|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 394ms-20|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, udp: true}
-  - {name: 382ms-20|vip1 日本-10, server: gzdx.jcnode.top, port: 41001, type: ss, cipher: aes-256-gcm, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, udp: true}
-  - {name: 704ms-20|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, udp: true}
-  - {name: 2723ms-20|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1005ms-11|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 462ms-11|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 1318ms-11|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 843ms-11|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 1103ms-11|JCBB_ 印度01【vip1】, server: gzdx.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 808ms-11|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 1577ms-11|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 884ms-11|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 867ms-11|JCBB_越南 02【vip1 | 3x速率】, server: gzdx.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
-  - {name: 938ms-11|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 950ms-11|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 280ms-6|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 316ms-6|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 360ms-6|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 505ms-6|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 369ms-6|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 356ms-6|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 347ms-6|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 955ms-6|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 500ms-6|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 463ms-6|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 793ms-6|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 695ms-6|vip1 印度-01, server: gzdx.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 661ms-6|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
-  - {name: 1729ms-6|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 570ms-4|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 451ms-4|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 470ms-4|JCBB_香港02【vip1】, server: gzdx.jcnode.top, port: 20000, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 738ms-4|JCBB_香港09【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 1494ms-4|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 689ms-4|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 917ms-4|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 1588ms-4|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: db44e794-a892-4041-9ceb-b5a369c20876, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 879ms-4|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 3700ms-4|JCBB_ 台湾 01【vip1】, server: gzdx.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 3197ms-4|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 1963ms-4|JCBB_土耳其 01【vip1】, server: gzdx.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 2466ms-4|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 1081ms-4|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 1258ms-4|JCBB_越南 02【vip1 | 3x速率】, server: gzdx.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 1234ms-4|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 920ms-4|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 841ms-4|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 268ms-4|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 381ms-4|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 381ms-4|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 485ms-4|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 417ms-4|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 454ms-4|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 926ms-4|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 564ms-4|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 760ms-4|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 673ms-4|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
-  - {name: 1455ms-4|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1633ms-4|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1302ms-3|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
-  - {name: 272ms-2|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 289ms-2|vip1 香港-05, server: gzdx.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 311ms-2|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 788ms-2|vip1 香港-09, server: gzdx.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 767ms-2|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 286ms-2|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 985ms-2|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 2435ms-2|vip1 新加坡-02, server: gzdx.jcnode.top, port: 43000, type: vmess, uuid: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 463ms-2|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 714ms-2|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 730ms-2|vip1 美国-05, server: gzdx.jcnode.top, port: 48002, type: vmess, uuid: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 449ms-2|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 469ms-2|vip1 澳大利亚-01, server: gzdx.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 1574ms-2|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 826ms-2|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 336ms-2|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 1481ms-2|JCBB_香港 05【vip1】, server: gzyd.jcnode.top, port: 20003, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 389ms-2|JCBB_香港09【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 1212ms-2|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 1084ms-2|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 513ms-2|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 1559ms-2|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: eb4ac8d7-e235-4416-b753-b0778655aa39, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 502ms-2|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 3956ms-2|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 964ms-2|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 2543ms-2|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 1096ms-2|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 859ms-2|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 816ms-2|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 812ms-2|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 288ms-2|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 245ms-2|vip1 香港-05, server: gzdx.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 292ms-2|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 267ms-2|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 298ms-2|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 307ms-2|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 976ms-2|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 68e6055d-5c71-424e-9ce5-5238a33be1e3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 463ms-2|vip1 新加坡-04 2, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 387ms-2|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 919ms-2|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 441ms-2|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 1562ms-2|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 283ms-2|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 291ms-2|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 262ms-2|vip1 香港-09, server: gzdx.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 260ms-2|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 316ms-2|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 455ms-2|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 270ms-2|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 951ms-2|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
-  - {name: 481ms-2|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 391ms-2|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 762ms-2|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 535ms-2|vip1 美国-08, server: gzdx.jcnode.top, port: 48001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 603ms-2|vip1 印度-01, server: gzdx.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 446ms-2|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 1462ms-2|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1543ms-2|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 226ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 291ms-1|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 271ms-1|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 449ms-1|vip2 澳大利亚-02, server: gzdx01.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: d4ef8c78-a81d-48b8-bf23-bc1d71903df7, udp: true}
-  - {name: 4030ms-1|JCBB_ 台湾 01【vip1】, server: gzdx.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
-  - {name: 954ms-1|JCBB_ 新加坡 01【vip1】, server: gzdx.jcnode.top, port: 23000, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 958ms-1|JCBB_ 美国 04【vip1】, server: gzdx.jcnode.top, port: 28001, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 516ms-1|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 4747ms-1|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 601ms-1|vip1 印度-01, server: gzdx.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
-  - {name: 1478ms-1|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 208ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 302ms-1|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
-  - {name: 744ms-1|vip1 美国-05, server: gzdx.jcnode.top, port: 48002, type: vmess, uuid: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
-  - {name: 472ms-1|vip2 澳大利亚-02, server: gzdx01.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
+  - {name: 542ms-21|vip1 澳大利亚-01, server: gzdx.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, udp: true}
+  - {name: 1509ms-21|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 2250ms-21|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 77bec61a-1dce-4577-9b6f-e923b86d980a, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3366ms-21|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, udp: true}
+  - {name: 338ms-21|vip1 日本-10, server: gzdx.jcnode.top, port: 41001, type: ss, cipher: aes-256-gcm, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, udp: true}
+  - {name: 536ms-21|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, udp: true}
+  - {name: 2598ms-21|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 84f735b1-4e34-4bd9-84be-6e4c53e2a878, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3534ms-12|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
+  - {name: 3419ms-12|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 3704ms-12|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
+  - {name: 496ms-12|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
+  - {name: 660ms-12|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
+  - {name: 1618ms-12|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3579ms-12|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, udp: true}
+  - {name: 1269ms-12|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 3831ms-12|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: bea68b85-eb1d-40d3-b05d-cd8363b48c5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 237ms-7|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
+  - {name: 352ms-7|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
+  - {name: 534ms-7|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
+  - {name: 333ms-7|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
+  - {name: 1120ms-7|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 552ms-7|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 379ms-7|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 756ms-7|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 675ms-7|vip1 印度-01, server: gzdx.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
+  - {name: 639ms-7|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, udp: true}
+  - {name: 3310ms-7|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: a63ca3e9-c2ac-48f6-b2e6-09d5b860618c, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 533ms-5|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 1513ms-5|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 279ms-5|JCBB_香港02【vip1】, server: gzdx.jcnode.top, port: 20000, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 467ms-5|JCBB_香港09【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 894ms-5|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 536ms-5|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 696ms-5|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 2787ms-5|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: db44e794-a892-4041-9ceb-b5a369c20876, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 494ms-5|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 1246ms-5|JCBB_ 台湾 01【vip1】, server: gzdx.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 1511ms-5|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 1142ms-5|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 638ms-5|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 466ms-5|JCBB_越南 02【vip1 | 3x速率】, server: gzdx.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 1264ms-5|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 860ms-5|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 911ms-5|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: db44e794-a892-4041-9ceb-b5a369c20876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 371ms-5|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 3310ms-5|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 1229ms-5|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 342ms-5|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 462ms-5|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 1094ms-5|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 634ms-5|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 822ms-5|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 653ms-5|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, udp: true}
+  - {name: 2162ms-5|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 6dccf96f-d1fe-4bd1-9ae7-4dddcf7a512d, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 704ms-4|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: db44e794-a892-4041-9ceb-b5a369c20876, udp: true}
+  - {name: 521ms-3|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 728ms-3|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 1647ms-3|JCBB_香港 05【vip1】, server: gzyd.jcnode.top, port: 20003, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 751ms-3|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 3689ms-3|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 4263ms-3|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 3442ms-3|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 1349ms-3|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: eb4ac8d7-e235-4416-b753-b0778655aa39, udp: true}
+  - {name: 1555ms-3|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 1169ms-3|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: eb4ac8d7-e235-4416-b753-b0778655aa39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 493ms-3|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 518ms-3|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 689ms-3|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 293ms-3|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 959ms-3|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 68e6055d-5c71-424e-9ce5-5238a33be1e3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 522ms-3|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 1687ms-3|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 508ms-3|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 1861ms-3|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3305ms-3|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
+  - {name: 3309ms-3|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
+  - {name: 380ms-3|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
+  - {name: 309ms-3|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
+  - {name: 1028ms-3|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 551ms-3|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 367ms-3|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 782ms-3|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 518ms-3|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, udp: true}
+  - {name: 1454ms-3|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 2922ms-3|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 71407dfa-4f60-4995-b72b-3b3fbd4b84f6, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 1422ms-2|vip1 韩国-01, server: gzdx.jcnode.top, port: 44001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 699ms-2|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 575ms-2|vip1 印度-01, server: gzdx.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 68e6055d-5c71-424e-9ce5-5238a33be1e3, udp: true}
+  - {name: 474ms-1|距离下次重置剩余：23 天, server: gzdx.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 477ms-1|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 364ms-1|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 828ms-1|JCBB_香港 05【vip1】, server: gzyd.jcnode.top, port: 20003, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 397ms-1|JCBB_香港09【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 544ms-1|JCBB_香港 10【vip1】, server: gzdx.jcnode.top, port: 20001, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 716ms-1|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 534ms-1|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 512ms-1|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 1587ms-1|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 460ms-1|JCBB_日本02【vip1】, server: gzdx.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 550ms-1|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 1497ms-1|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 548ms-1|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 1229ms-1|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 597ms-1|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 1087ms-1|JCBB_ 新加坡 01【vip1】, server: gzdx.jcnode.top, port: 23000, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 717ms-1|JCBB_新加坡 02【vip1】, server: gzdx.jcnode.top, port: 23001, type: ss, cipher: aes-256-gcm, password: 880b1e29-25ac-469d-9162-cdfc05ce89ee, udp: true}
+  - {name: 1303ms-1|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 880ms-1|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 1033ms-1|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 753ms-1|JCBB_ 美国 04【vip1】, server: gzdx.jcnode.top, port: 28001, type: vmess, uuid: 880b1e29-25ac-469d-9162-cdfc05ce89ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 257ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 317ms-1|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 316ms-1|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 340ms-1|vip1 香港-09, server: gzdx.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 366ms-1|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 393ms-1|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 361ms-1|vip1 日本-07, server: gzdx.jcnode.top, port: 41003, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 307ms-1|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 1114ms-1|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 5f798efb-8d68-41cf-bfe2-61a451b8d282, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 499ms-1|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 562ms-1|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 709ms-1|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 754ms-1|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 500ms-1|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 455ms-1|vip2 澳大利亚-02, server: gzdx01.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, udp: true}
+  - {name: 1590ms-1|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 1670ms-1|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 5f798efb-8d68-41cf-bfe2-61a451b8d282, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 530ms-1|距离下次重置剩余：23 天, server: gzdx.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 547ms-1|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 411ms-1|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 312ms-1|JCBB_香港02【vip1】, server: gzdx.jcnode.top, port: 20000, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 558ms-1|JCBB_香港 05【vip1】, server: gzyd.jcnode.top, port: 20003, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 407ms-1|JCBB_香港09【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 729ms-1|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 465ms-1|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 514ms-1|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 1700ms-1|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 490ms-1|JCBB_日本02【vip1】, server: gzdx.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 572ms-1|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 1015ms-1|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 431ms-1|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 2407ms-1|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 549ms-1|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 743ms-1|JCBB_新加坡 02【vip1】, server: gzdx.jcnode.top, port: 23001, type: ss, cipher: aes-256-gcm, password: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, udp: true}
+  - {name: 1066ms-1|JCBB_ 新加坡 03【vip1】, server: gzyd.jcnode.top, port: 23002, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 825ms-1|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 839ms-1|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 731ms-1|JCBB_ 美国 04【vip1】, server: gzdx.jcnode.top, port: 28001, type: vmess, uuid: e35a3a2f-a6ff-4ca6-9daf-226030d219b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 206ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 324ms-1|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 213ms-1|vip1 香港-05, server: gzdx.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 288ms-1|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 257ms-1|vip1 香港-09, server: gzdx.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 303ms-1|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 328ms-1|vip1 日本-10, server: gzdx.jcnode.top, port: 41001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 323ms-1|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 305ms-1|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 296ms-1|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 1089ms-1|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: c1c3d138-db68-446b-b13c-0c8433e858b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 2062ms-1|vip1 新加坡-02, server: gzdx.jcnode.top, port: 43000, type: vmess, uuid: c1c3d138-db68-446b-b13c-0c8433e858b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 517ms-1|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: c1c3d138-db68-446b-b13c-0c8433e858b7, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 570ms-1|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 642ms-1|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 934ms-1|vip1 美国-05, server: gzdx.jcnode.top, port: 48002, type: vmess, uuid: c1c3d138-db68-446b-b13c-0c8433e858b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 612ms-1|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 459ms-1|vip1 澳大利亚-01, server: gzdx.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: c1c3d138-db68-446b-b13c-0c8433e858b7, udp: true}
+  - {name: 1611ms-1|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: c1c3d138-db68-446b-b13c-0c8433e858b7, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 647ms-1|JCBB_ 韩国 01【vip1】, server: gzyd.jcnode.top, port: 22000, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 741ms-1|JCBB_香港01【vip1】, server: gzyd.jcnode.top, port: 20000, type: vmess, uuid: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 546ms-1|JCBB_香港 05【vip1】, server: gzyd.jcnode.top, port: 20003, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 461ms-1|JCBB_香港09【vip1】, server: gzyd.jcnode.top, port: 20001, type: vmess, uuid: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 737ms-1|JCBB_德国02【vip1】, server: gzyd.jcnode.top, port: 27000, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 466ms-1|JCBB_德国01【vip1| 3x速率】, server: szcu.lele233.top, port: 15039, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 666ms-1|JCBB_ 印度01【vip1】, server: gzdx.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 642ms-1|JCBB_ 印度02【vip1】, server: gzyd.jcnode.top, port: 25001, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 1954ms-1|JCBB_ 英国01【vip1】, server: gzyd.jcnode.top, port: 26000, type: trojan, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 766ms-1|JCBB_日本03【vip1】, server: gzyd.jcnode.top, port: 21003, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 1116ms-1|JCBB_ 台湾 02【vip1】, server: gzyd.jcnode.top, port: 24002, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 3033ms-1|JCBB_ 台湾 08【vip1】, server: gzyd.jcnode.top, port: 24003, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 1584ms-1|JCBB_土耳其 01【vip1】, server: gzdx.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 1587ms-1|JCBB_土耳其 02【vip1】, server: gzyd.jcnode.top, port: 29500, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 3570ms-1|JCBB_越南 01【vip1 | 3x速率】, server: gzyd.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 647ms-1|JCBB_越南 02【vip1 | 3x速率】, server: gzdx.jcnode.top, port: 29200, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 1465ms-1|JCBB_ 新加坡 01【vip1】, server: gzdx.jcnode.top, port: 23000, type: vmess, uuid: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 830ms-1|JCBB_新加坡 02【vip1】, server: gzdx.jcnode.top, port: 23001, type: ss, cipher: aes-256-gcm, password: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, udp: true}
+  - {name: 871ms-1|JCBB_ 美国01【vip1】, server: gzyd.jcnode.top, port: 28000, type: vmess, uuid: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 4375ms-1|JCBB_ 美国 03【vip1】, server: gzyd.jcnode.top, port: 28001, type: vmess, uuid: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 4373ms-1|JCBB_ 美国 04【vip1】, server: gzdx.jcnode.top, port: 28001, type: vmess, uuid: 542a3fb2-c00b-4c36-b0c1-c7bbc073893e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 195ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 314ms-1|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 317ms-1|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 1186ms-1|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 349ms-1|vip1 日本-07, server: gzdx.jcnode.top, port: 41003, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 390ms-1|vip1 台湾-01, server: gzdx.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 401ms-1|vip1 台湾-05, server: gzdx.jcnode.top, port: 42000, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 1587ms-1|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 1028ms-1|vip1 新加坡-02, server: gzdx.jcnode.top, port: 43000, type: vmess, uuid: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 491ms-1|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 420ms-1|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 541ms-1|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 720ms-1|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 3861ms-1|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 469ms-1|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 457ms-1|vip1 澳大利亚-01, server: gzdx.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, udp: true}
+  - {name: 1694ms-1|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: a0a17159-98d5-4d7a-a07d-341e3bdc51b4, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 261ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 772ms-1|vip1 香港-02, server: gzyd.jcnode.top, port: 40002, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 667ms-1|vip1 香港-06, server: gzyd.jcnode.top, port: 40003, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 695ms-1|vip1 香港-10, server: gzyd.jcnode.top, port: 40001, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 349ms-1|vip1 日本-04, server: gzdx.jcnode.top, port: 41000, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 315ms-1|vip1 日本-07, server: gzdx.jcnode.top, port: 41003, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 286ms-1|vip1 台湾-02, server: gzdx01.jcnode.top, port: 42001, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 3981ms-1|vip1 新加坡-01, server: gzyd.jcnode.top, port: 43000, type: vmess, uuid: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzyd.jcnode.top}}, udp: true}
+  - {name: 857ms-1|vip1 新加坡-02, server: gzdx.jcnode.top, port: 43000, type: vmess, uuid: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 654ms-1|vip1 新加坡-04, server: gzyd.jcnode.top, port: 43002, type: trojan, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 394ms-1|vip1 新加坡-05, server: gzdx.jcnode.top, port: 43002, type: trojan, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, sni: sg01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 569ms-1|vip1 新加坡-08, server: gzdx.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 1722ms-1|vip1 新加坡-09, server: gzyd.jcnode.top, port: 43001, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 3307ms-1|vip1 美国-04, server: gzdx.jcnode.top, port: 48000, type: trojan, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, sni: us2.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 752ms-1|vip1 美国-05, server: gzdx.jcnode.top, port: 48002, type: vmess, uuid: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fly, headers: {Host: gzdx.jcnode.top}}, udp: true}
+  - {name: 597ms-1|vip1 印度-01, server: gzdx.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 894ms-1|vip3 印度-03, server: gzyd02.jcnode.top, port: 49000, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 475ms-1|vip1 澳大利亚-01, server: gzdx.jcnode.top, port: 49001, type: ss, cipher: aes-256-gcm, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, udp: true}
+  - {name: 1549ms-1|vip1 英国-03, server: gzdx.jcnode.top, port: 47000, type: trojan, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 1757ms-1|vip1 英国-04, server: gzyd.jcnode.top, port: 47000, type: trojan, password: 8525e2d0-52c3-49d3-9ae9-235c15b2c2c0, sni: uk01.ckcloud.info, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -588,622 +940,997 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 394ms-20|vip1 香港-02
-      - 462ms-11|JCBB_香港01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 270ms-2|vip1 台湾-01
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
+      - 3366ms-21|vip1 香港-02
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 307ms-1|vip1 台湾-02
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 286ms-1|vip1 台湾-02
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1219,143 +1946,231 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 709ms-20|vip3 印度-03
-      - 541ms-20|vip1 澳大利亚-01
-      - 1505ms-20|vip1 英国-03
-      - 1855ms-20|vip1 英国-04
-      - 394ms-20|vip1 香港-02
-      - 382ms-20|vip1 日本-10
-      - 704ms-20|vip3 印度-03
-      - 2723ms-20|vip1 英国-04
-      - 1005ms-11|JCBB_ 韩国 01【vip1】
-      - 462ms-11|JCBB_香港01【vip1】
-      - 1318ms-11|JCBB_德国02【vip1】
-      - 843ms-11|JCBB_德国01【vip1| 3x速率】
-      - 1103ms-11|JCBB_ 印度01【vip1】
-      - 808ms-11|JCBB_ 印度02【vip1】
-      - 1577ms-11|JCBB_ 英国01【vip1】
-      - 884ms-11|JCBB_越南 01【vip1 | 3x速率】
-      - 867ms-11|JCBB_越南 02【vip1 | 3x速率】
-      - 938ms-11|JCBB_ 新加坡 03【vip1】
-      - 950ms-11|JCBB_ 美国01【vip1】
-      - 280ms-6|vip1 香港-01
-      - 316ms-6|vip1 香港-02
-      - 360ms-6|vip1 香港-06
-      - 505ms-6|vip1 香港-10
-      - 369ms-6|vip1 台湾-01
-      - 356ms-6|vip1 台湾-02
-      - 347ms-6|vip1 台湾-05
-      - 955ms-6|vip1 新加坡-01
-      - 500ms-6|vip1 新加坡-04
-      - 463ms-6|vip1 新加坡-05
-      - 793ms-6|vip1 美国-04
-      - 695ms-6|vip1 印度-01
-      - 661ms-6|vip3 印度-03
-      - 1729ms-6|vip1 英国-04
-      - 570ms-4|JCBB_ 韩国 01【vip1】
-      - 451ms-4|JCBB_香港01【vip1】
-      - 470ms-4|JCBB_香港02【vip1】
-      - 738ms-4|JCBB_香港09【vip1】
-      - 1494ms-4|JCBB_德国02【vip1】
-      - 689ms-4|JCBB_德国01【vip1| 3x速率】
-      - 917ms-4|JCBB_ 印度02【vip1】
-      - 1588ms-4|JCBB_ 英国01【vip1】
-      - 879ms-4|JCBB_日本03【vip1】
-      - 3700ms-4|JCBB_ 台湾 01【vip1】
-      - 3197ms-4|JCBB_ 台湾 02【vip1】
-      - 1963ms-4|JCBB_土耳其 01【vip1】
-      - 2466ms-4|JCBB_土耳其 02【vip1】
-      - 1081ms-4|JCBB_越南 01【vip1 | 3x速率】
-      - 1258ms-4|JCBB_越南 02【vip1 | 3x速率】
-      - 1234ms-4|JCBB_ 新加坡 03【vip1】
-      - 920ms-4|JCBB_ 美国01【vip1】
-      - 841ms-4|JCBB_ 美国 03【vip1】
-      - 268ms-4|vip1 香港-01
-      - 381ms-4|vip1 香港-02
-      - 381ms-4|vip1 香港-06
-      - 485ms-4|vip1 香港-10
-      - 417ms-4|vip1 日本-04
-      - 454ms-4|vip1 韩国-01
-      - 926ms-4|vip1 新加坡-01
-      - 564ms-4|vip1 新加坡-04
-      - 760ms-4|vip1 新加坡-09
-      - 673ms-4|vip3 印度-03
-      - 1455ms-4|vip1 英国-03
-      - 1633ms-4|vip1 英国-04
-      - 1302ms-3|JCBB_ 台湾 08【vip1】
-      - 272ms-2|vip1 香港-02
-      - 289ms-2|vip1 香港-05
-      - 311ms-2|vip1 香港-06
-      - 788ms-2|vip1 香港-09
-      - 767ms-2|vip1 香港-10
-      - 286ms-2|vip1 台湾-02
-      - 985ms-2|vip1 新加坡-01
-      - 2435ms-2|vip1 新加坡-02
-      - 463ms-2|vip1 新加坡-04
-      - 714ms-2|vip1 新加坡-09
-      - 730ms-2|vip1 美国-05
-      - 449ms-2|vip3 印度-03
-      - 469ms-2|vip1 澳大利亚-01
-      - 1574ms-2|vip1 英国-04
-      - 826ms-2|JCBB_ 韩国 01【vip1】
-      - 336ms-2|JCBB_香港01【vip1】
-      - 1481ms-2|JCBB_香港 05【vip1】
-      - 389ms-2|JCBB_香港09【vip1】
-      - 1212ms-2|JCBB_德国02【vip1】
-      - 1084ms-2|JCBB_德国01【vip1| 3x速率】
-      - 513ms-2|JCBB_ 印度02【vip1】
-      - 1559ms-2|JCBB_ 英国01【vip1】
-      - 502ms-2|JCBB_日本03【vip1】
-      - 3956ms-2|JCBB_ 台湾 02【vip1】
-      - 964ms-2|JCBB_ 台湾 08【vip1】
-      - 2543ms-2|JCBB_土耳其 02【vip1】
-      - 1096ms-2|JCBB_越南 01【vip1 | 3x速率】
-      - 859ms-2|JCBB_ 新加坡 03【vip1】
-      - 816ms-2|JCBB_ 美国01【vip1】
-      - 812ms-2|JCBB_ 美国 03【vip1】
-      - 288ms-2|vip1 香港-02
-      - 245ms-2|vip1 香港-05
-      - 292ms-2|vip1 香港-06
-      - 267ms-2|vip1 香港-10
-      - 298ms-2|vip1 台湾-02
-      - 307ms-2|vip1 台湾-05
-      - 976ms-2|vip1 新加坡-01
-      - 463ms-2|vip1 新加坡-04 2
-      - 387ms-2|vip1 新加坡-05
-      - 919ms-2|vip1 新加坡-09
-      - 441ms-2|vip3 印度-03
-      - 1562ms-2|vip1 英国-04
-      - 283ms-2|vip1 香港-02
-      - 291ms-2|vip1 香港-06
-      - 262ms-2|vip1 香港-09
-      - 260ms-2|vip1 香港-10
-      - 316ms-2|vip1 日本-04
-      - 455ms-2|vip1 韩国-01
-      - 270ms-2|vip1 台湾-01
-      - 951ms-2|vip1 新加坡-01
-      - 481ms-2|vip1 新加坡-04
-      - 391ms-2|vip1 新加坡-05
-      - 762ms-2|vip1 美国-04
-      - 535ms-2|vip1 美国-08
-      - 603ms-2|vip1 印度-01
-      - 446ms-2|vip3 印度-03
-      - 1462ms-2|vip1 英国-03
-      - 1543ms-2|vip1 英国-04
-      - 226ms-1|vip1 香港-01
-      - 291ms-1|vip1 台湾-01
-      - 271ms-1|vip1 台湾-05
-      - 449ms-1|vip2 澳大利亚-02
-      - 4030ms-1|JCBB_ 台湾 01【vip1】
-      - 954ms-1|JCBB_ 新加坡 01【vip1】
-      - 958ms-1|JCBB_ 美国 04【vip1】
-      - 516ms-1|vip1 韩国-01
-      - 4747ms-1|vip1 新加坡-08
-      - 601ms-1|vip1 印度-01
-      - 1478ms-1|vip1 英国-03
-      - 208ms-1|vip1 香港-01
-      - 302ms-1|vip1 台湾-02
-      - 744ms-1|vip1 美国-05
-      - 472ms-1|vip2 澳大利亚-02
+      - 542ms-21|vip1 澳大利亚-01
+      - 1509ms-21|vip1 英国-03
+      - 2250ms-21|vip1 英国-04
+      - 3366ms-21|vip1 香港-02
+      - 338ms-21|vip1 日本-10
+      - 536ms-21|vip3 印度-03
+      - 2598ms-21|vip1 英国-04
+      - 3534ms-12|JCBB_ 韩国 01【vip1】
+      - 3419ms-12|JCBB_香港01【vip1】
+      - 3704ms-12|JCBB_德国02【vip1】
+      - 496ms-12|JCBB_德国01【vip1| 3x速率】
+      - 660ms-12|JCBB_ 印度02【vip1】
+      - 1618ms-12|JCBB_ 英国01【vip1】
+      - 3579ms-12|JCBB_越南 01【vip1 | 3x速率】
+      - 1269ms-12|JCBB_ 新加坡 03【vip1】
+      - 3831ms-12|JCBB_ 美国01【vip1】
+      - 237ms-7|vip1 香港-01
+      - 352ms-7|vip1 香港-02
+      - 534ms-7|vip1 香港-10
+      - 333ms-7|vip1 台湾-05
+      - 1120ms-7|vip1 新加坡-01
+      - 552ms-7|vip1 新加坡-04
+      - 379ms-7|vip1 新加坡-05
+      - 756ms-7|vip1 美国-04
+      - 675ms-7|vip1 印度-01
+      - 639ms-7|vip3 印度-03
+      - 3310ms-7|vip1 英国-04
+      - 533ms-5|JCBB_ 韩国 01【vip1】
+      - 1513ms-5|JCBB_香港01【vip1】
+      - 279ms-5|JCBB_香港02【vip1】
+      - 467ms-5|JCBB_香港09【vip1】
+      - 894ms-5|JCBB_德国02【vip1】
+      - 536ms-5|JCBB_德国01【vip1| 3x速率】
+      - 696ms-5|JCBB_ 印度02【vip1】
+      - 2787ms-5|JCBB_ 英国01【vip1】
+      - 494ms-5|JCBB_日本03【vip1】
+      - 1246ms-5|JCBB_ 台湾 01【vip1】
+      - 1511ms-5|JCBB_ 台湾 02【vip1】
+      - 1142ms-5|JCBB_土耳其 02【vip1】
+      - 638ms-5|JCBB_越南 01【vip1 | 3x速率】
+      - 466ms-5|JCBB_越南 02【vip1 | 3x速率】
+      - 1264ms-5|JCBB_ 新加坡 03【vip1】
+      - 860ms-5|JCBB_ 美国01【vip1】
+      - 911ms-5|JCBB_ 美国 03【vip1】
+      - 371ms-5|vip1 香港-02
+      - 3310ms-5|vip1 香港-06
+      - 1229ms-5|vip1 香港-10
+      - 342ms-5|vip1 日本-04
+      - 462ms-5|vip1 韩国-01
+      - 1094ms-5|vip1 新加坡-01
+      - 634ms-5|vip1 新加坡-04
+      - 822ms-5|vip1 新加坡-09
+      - 653ms-5|vip3 印度-03
+      - 2162ms-5|vip1 英国-04
+      - 704ms-4|JCBB_ 台湾 08【vip1】
+      - 521ms-3|JCBB_ 韩国 01【vip1】
+      - 728ms-3|JCBB_香港01【vip1】
+      - 1647ms-3|JCBB_香港 05【vip1】
+      - 751ms-3|JCBB_ 印度02【vip1】
+      - 3689ms-3|JCBB_日本03【vip1】
+      - 4263ms-3|JCBB_ 台湾 02【vip1】
+      - 3442ms-3|JCBB_ 台湾 08【vip1】
+      - 1349ms-3|JCBB_土耳其 02【vip1】
+      - 1555ms-3|JCBB_ 新加坡 03【vip1】
+      - 1169ms-3|JCBB_ 美国 03【vip1】
+      - 493ms-3|vip1 香港-02
+      - 518ms-3|vip1 香港-06
+      - 689ms-3|vip1 香港-10
+      - 293ms-3|vip1 台湾-02
+      - 959ms-3|vip1 新加坡-01
+      - 522ms-3|vip1 新加坡-04
+      - 1687ms-3|vip1 新加坡-09
+      - 508ms-3|vip3 印度-03
+      - 1861ms-3|vip1 英国-04
+      - 3305ms-3|vip1 香港-02
+      - 3309ms-3|vip1 香港-06
+      - 380ms-3|vip1 香港-10
+      - 309ms-3|vip1 台湾-01
+      - 1028ms-3|vip1 新加坡-01
+      - 551ms-3|vip1 新加坡-04
+      - 367ms-3|vip1 新加坡-05
+      - 782ms-3|vip1 美国-04
+      - 518ms-3|vip3 印度-03
+      - 1454ms-3|vip1 英国-03
+      - 2922ms-3|vip1 英国-04
+      - 1422ms-2|vip1 韩国-01
+      - 699ms-2|vip1 新加坡-08
+      - 575ms-2|vip1 印度-01
+      - 474ms-1|距离下次重置剩余：23 天
+      - 477ms-1|JCBB_ 韩国 01【vip1】
+      - 364ms-1|JCBB_香港01【vip1】
+      - 828ms-1|JCBB_香港 05【vip1】
+      - 397ms-1|JCBB_香港09【vip1】
+      - 544ms-1|JCBB_香港 10【vip1】
+      - 716ms-1|JCBB_德国02【vip1】
+      - 534ms-1|JCBB_德国01【vip1| 3x速率】
+      - 512ms-1|JCBB_ 印度02【vip1】
+      - 1587ms-1|JCBB_ 英国01【vip1】
+      - 460ms-1|JCBB_日本02【vip1】
+      - 550ms-1|JCBB_日本03【vip1】
+      - 1497ms-1|JCBB_ 台湾 02【vip1】
+      - 548ms-1|JCBB_ 台湾 08【vip1】
+      - 1229ms-1|JCBB_土耳其 02【vip1】
+      - 597ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 1087ms-1|JCBB_ 新加坡 01【vip1】
+      - 717ms-1|JCBB_新加坡 02【vip1】
+      - 1303ms-1|JCBB_ 新加坡 03【vip1】
+      - 880ms-1|JCBB_ 美国01【vip1】
+      - 1033ms-1|JCBB_ 美国 03【vip1】
+      - 753ms-1|JCBB_ 美国 04【vip1】
+      - 257ms-1|vip1 香港-01
+      - 317ms-1|vip1 香港-02
+      - 316ms-1|vip1 香港-06
+      - 340ms-1|vip1 香港-09
+      - 366ms-1|vip1 香港-10
+      - 393ms-1|vip1 日本-04
+      - 361ms-1|vip1 日本-07
+      - 307ms-1|vip1 台湾-02
+      - 1114ms-1|vip1 新加坡-01
+      - 499ms-1|vip1 新加坡-04
+      - 562ms-1|vip1 新加坡-08
+      - 709ms-1|vip1 新加坡-09
+      - 754ms-1|vip1 美国-04
+      - 500ms-1|vip3 印度-03
+      - 455ms-1|vip2 澳大利亚-02
+      - 1590ms-1|vip1 英国-03
+      - 1670ms-1|vip1 英国-04
+      - 530ms-1|距离下次重置剩余：23 天
+      - 547ms-1|JCBB_ 韩国 01【vip1】
+      - 411ms-1|JCBB_香港01【vip1】
+      - 312ms-1|JCBB_香港02【vip1】
+      - 558ms-1|JCBB_香港 05【vip1】
+      - 407ms-1|JCBB_香港09【vip1】
+      - 729ms-1|JCBB_德国02【vip1】
+      - 465ms-1|JCBB_德国01【vip1| 3x速率】
+      - 514ms-1|JCBB_ 印度02【vip1】
+      - 1700ms-1|JCBB_ 英国01【vip1】
+      - 490ms-1|JCBB_日本02【vip1】
+      - 572ms-1|JCBB_日本03【vip1】
+      - 1015ms-1|JCBB_ 台湾 02【vip1】
+      - 431ms-1|JCBB_ 台湾 08【vip1】
+      - 2407ms-1|JCBB_土耳其 02【vip1】
+      - 549ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 743ms-1|JCBB_新加坡 02【vip1】
+      - 1066ms-1|JCBB_ 新加坡 03【vip1】
+      - 825ms-1|JCBB_ 美国01【vip1】
+      - 839ms-1|JCBB_ 美国 03【vip1】
+      - 731ms-1|JCBB_ 美国 04【vip1】
+      - 206ms-1|vip1 香港-01
+      - 324ms-1|vip1 香港-02
+      - 213ms-1|vip1 香港-05
+      - 288ms-1|vip1 香港-06
+      - 257ms-1|vip1 香港-09
+      - 303ms-1|vip1 香港-10
+      - 328ms-1|vip1 日本-10
+      - 323ms-1|vip1 台湾-01
+      - 305ms-1|vip1 台湾-02
+      - 296ms-1|vip1 台湾-05
+      - 1089ms-1|vip1 新加坡-01
+      - 2062ms-1|vip1 新加坡-02
+      - 517ms-1|vip1 新加坡-04
+      - 570ms-1|vip1 新加坡-08
+      - 642ms-1|vip1 新加坡-09
+      - 934ms-1|vip1 美国-05
+      - 612ms-1|vip3 印度-03
+      - 459ms-1|vip1 澳大利亚-01
+      - 1611ms-1|vip1 英国-04
+      - 647ms-1|JCBB_ 韩国 01【vip1】
+      - 741ms-1|JCBB_香港01【vip1】
+      - 546ms-1|JCBB_香港 05【vip1】
+      - 461ms-1|JCBB_香港09【vip1】
+      - 737ms-1|JCBB_德国02【vip1】
+      - 466ms-1|JCBB_德国01【vip1| 3x速率】
+      - 666ms-1|JCBB_ 印度01【vip1】
+      - 642ms-1|JCBB_ 印度02【vip1】
+      - 1954ms-1|JCBB_ 英国01【vip1】
+      - 766ms-1|JCBB_日本03【vip1】
+      - 1116ms-1|JCBB_ 台湾 02【vip1】
+      - 3033ms-1|JCBB_ 台湾 08【vip1】
+      - 1584ms-1|JCBB_土耳其 01【vip1】
+      - 1587ms-1|JCBB_土耳其 02【vip1】
+      - 3570ms-1|JCBB_越南 01【vip1 | 3x速率】
+      - 647ms-1|JCBB_越南 02【vip1 | 3x速率】
+      - 1465ms-1|JCBB_ 新加坡 01【vip1】
+      - 830ms-1|JCBB_新加坡 02【vip1】
+      - 871ms-1|JCBB_ 美国01【vip1】
+      - 4375ms-1|JCBB_ 美国 03【vip1】
+      - 4373ms-1|JCBB_ 美国 04【vip1】
+      - 195ms-1|vip1 香港-01
+      - 314ms-1|vip1 香港-02
+      - 317ms-1|vip1 香港-06
+      - 1186ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-07
+      - 390ms-1|vip1 台湾-01
+      - 401ms-1|vip1 台湾-05
+      - 1587ms-1|vip1 新加坡-01
+      - 1028ms-1|vip1 新加坡-02
+      - 491ms-1|vip1 新加坡-04
+      - 420ms-1|vip1 新加坡-05
+      - 541ms-1|vip1 新加坡-08
+      - 720ms-1|vip1 新加坡-09
+      - 3861ms-1|vip1 美国-04
+      - 469ms-1|vip3 印度-03
+      - 457ms-1|vip1 澳大利亚-01
+      - 1694ms-1|vip1 英国-04
+      - 261ms-1|vip1 香港-01
+      - 772ms-1|vip1 香港-02
+      - 667ms-1|vip1 香港-06
+      - 695ms-1|vip1 香港-10
+      - 349ms-1|vip1 日本-04
+      - 315ms-1|vip1 日本-07
+      - 286ms-1|vip1 台湾-02
+      - 3981ms-1|vip1 新加坡-01
+      - 857ms-1|vip1 新加坡-02
+      - 654ms-1|vip1 新加坡-04
+      - 394ms-1|vip1 新加坡-05
+      - 569ms-1|vip1 新加坡-08
+      - 1722ms-1|vip1 新加坡-09
+      - 3307ms-1|vip1 美国-04
+      - 752ms-1|vip1 美国-05
+      - 597ms-1|vip1 印度-01
+      - 894ms-1|vip3 印度-03
+      - 475ms-1|vip1 澳大利亚-01
+      - 1549ms-1|vip1 英国-03
+      - 1757ms-1|vip1 英国-04
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
