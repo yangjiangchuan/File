@@ -5,63 +5,43 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 870ms-1|距离下次重置剩余：8 天, server: gzdx.jcnode.top, port: 29482, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: sg03.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1528ms-1|vip1 越南-01, server: gzdx.jcnode.top, port: 39191, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: vn01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1607ms-1|vip1 越南-01_1, server: gzdx01.jcnode.top, port: 43686, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: vn01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1475ms-1|vip2 越南-03, server: gzyd01.jcnode.top, port: 27934, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: vn01.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1361ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 42630, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: hk05.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 1508ms-1|vip1 香港-09, server: gzdx.jcnode.top, port: 41063, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: hk04.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 3887ms-1|vip1 香港-17, server: gzdx.jcnode.top, port: 44283, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: hk02.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 3751ms-1|vip1 香港-17_1, server: gzdx01.jcnode.top, port: 40027, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: hk02.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 3712ms-1|vip1 香港-18, server: gzyd.jcnode.top, port: 36554, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: hk02.ckcloud.info, skip-cert-verify: true, udp: true}
-  - {name: 3970ms-1|vip1 日本-01_1, server: gzdx01.jcnode.top, port: 40716, type: trojan, password: 666cbd5d-f00f-4f6e-b744-04598eeee3f5, sni: jp001.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 2446ms-1|距离下次重置剩余：8 天, server: gzdx.jcnode.top, port: 29482, type: trojan, password: aed69dd7-842d-447e-8e1a-f3f9d7cce94a, sni: sg03.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 2048ms-1|vip1 越南-01, server: gzdx.jcnode.top, port: 39191, type: trojan, password: aed69dd7-842d-447e-8e1a-f3f9d7cce94a, sni: vn01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3784ms-1|vip1 越南-01_1, server: gzdx01.jcnode.top, port: 43686, type: trojan, password: aed69dd7-842d-447e-8e1a-f3f9d7cce94a, sni: vn01.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3444ms-1|vip1 香港-01, server: gzdx.jcnode.top, port: 42630, type: trojan, password: aed69dd7-842d-447e-8e1a-f3f9d7cce94a, sni: hk05.ckcloud.info, skip-cert-verify: true, udp: true}
+  - {name: 3307ms-1|vip1 香港-09, server: gzdx.jcnode.top, port: 41063, type: trojan, password: aed69dd7-842d-447e-8e1a-f3f9d7cce94a, sni: hk04.ckcloud.info, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,72 +60,49 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -161,16 +118,11 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 870ms-1|距离下次重置剩余：8 天
-      - 1528ms-1|vip1 越南-01
-      - 1607ms-1|vip1 越南-01_1
-      - 1475ms-1|vip2 越南-03
-      - 1361ms-1|vip1 香港-01
-      - 1508ms-1|vip1 香港-09
-      - 3887ms-1|vip1 香港-17
-      - 3751ms-1|vip1 香港-17_1
-      - 3712ms-1|vip1 香港-18
-      - 3970ms-1|vip1 日本-01_1
+      - 2446ms-1|距离下次重置剩余：8 天
+      - 2048ms-1|vip1 越南-01
+      - 3784ms-1|vip1 越南-01_1
+      - 3444ms-1|vip1 香港-01
+      - 3307ms-1|vip1 香港-09
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
